@@ -32,7 +32,6 @@ a API varia de usuário para usuário, a sua API estará localizada no campo
 ## É possivel ver uma quantia maior de música ou um tempo diferente ?
 
 Sim !! No método "getTopTracks" temos a variável
-INSERIR PRINT 
 e é ela que define a quantia de músicas e o tempo determinado
 
 ---
