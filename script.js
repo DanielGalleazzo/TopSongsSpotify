@@ -1,4 +1,4 @@
-const token = 'BQD2Kikg9WpX7uJSAbNTzSqbl_-SSLSGF70RDpwAoVZ_5bnlcjoEv5Dhto9PwS6BcVLX9BQc5pi8jA9fkhHSW85zv3opyR2SQymnuEAusIdlSmbKsKEOd0ieywSMbqkAy4tWaEyguGTeoTA0F7Uqlfxez5lnnqYwTDjmB35uk-gOCmEiCDUL7EhXLE73RJsstOw-uh0FNQYcz48fy3vgaJ5VeKuxDqpCM1d9CSDi3gQz-z4w1VKgKzYj8P9lbFnkdzYq8c_ndD-PDxXH79Gi9ETA6NT6VbZG26fVxOubk3Vd-0XyS-mRYyQ'; // 🔐 Substitua com seu token
+const token = 'BQBbnMUFYKURHUih5-OkGHvIsWG4ntUNGsrFQSyZhTQOa4F8fhAJzVy0UUho2R_lrHmoBy65vr_faJMk6Tcr4G06UmE7s4iHKBSGZK6RlPRKPtcwWfRN5YhJAAYg-gVTWFs4iDk83xClk9OXKKCM3mD_8rOXTkVHfesISagl7-85ZQ2HcZamKNLKBgCWmqJziubMzJbvQM56MfPvbk29fPwhqm4tzk80CZCu0lk_rSRlKhwE6RzLTDBQfhkxYWh7DMFcWz0LOA13N3Xe_mNBqcxw73KxfLrF1PJ13YSn7dksyZ0sMpzrRxw';
 
 async function getTopTracks() {
   const res = await fetch('https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=5', {
