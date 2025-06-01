@@ -40,7 +40,7 @@ e é ela que define a quantia de músicas e o tempo determinado
 ## Como eu posso alterar a quantia de tempo/músicas ?
 
 Isso é muito simples, basta mudar os valores na variável "const res"
-INSERIR PRINT
+![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/spotifyconstres.JPG)
 você pode alterar a quantida de músicas e a data : short, medium e long
 short = 30 dias 
 medium = 90 dias
@@ -49,10 +49,14 @@ long = 180 dias
 ---
 
 ## Resultados
-
-INSERIR PRINT
-INSERIR PRINT
-INSERIR PRINT
+Short 
+![image alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top5MusicasShortTime.JPG)
+Medium
+![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top5MusicasMediumTime.JPG)
+Long
+![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top5MusicasLongTime.JPG)
+Short com 10 músicas
+![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top10MusicasShortTime.JPG)
 
 ---
 
