@@ -1,36 +1,34 @@
-const token = 'BQCyPCb2O-ZILRzxD949KH6A_l46HXbWAXwX0t3tAMZ2MncS2Rq8Dpf-pvYFo_PYDpn1M-7fcW1eCWmCXR__qzmK5ISDb_4UdnZWT37DpRdDSbnH3cJbZoAqscHC_2NcWX4hWfSrClXvHVq2_oT1IUwuUNQ8qh4SvffDzHs1yOYqDOynOtUhoukRY3xZZzDDgCyMMKfrTOUsRICmvFKtxqhFQihdFmPvYyvRfZTePsNPrnAjsPKdWYJ8cEdi3ver539dSJ8V-xMiadhREjq13oHO9aj8Z7eO0iBl2quXrzC7_b6Mw0UUba0';
+const token = 'BQD8Js6ISAP50wkY_4gVDM1eHE9Ts5QPae35bHgErTzQ3DkztUXLjk1SKNGDIWDIvQG5cK9FO4EZg3hG0jv3NPzKobB25Zt1j17yow1xHC2AkiOXUWv-sZYl85Zr5OJYxw398yqCbt5OJh8r2UWOTo9YoYhMbU5EAVt7is9hOy_v2SuFNn1eJQH66PTluluSMP19DYeJSDiyH93SEPQILhdWYr9_EPvBJUU2lLP1fWpKFsKAMrDiL1F3ds-y4Fcowfey4-At9mdPJCGLJHSmWwdMVgP4WtB4aBSt55WXhYouDLfFTsNpqi8';
+let isPublic = false;
+
 async function fetchWebApi(endpoint, method, body) {
   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
     method,
-    body:JSON.stringify(body)
+    body: body ? JSON.stringify(body) : undefined
   });
-  return await res.json();
+  return res.json();
 }
 
 const tracksUri = [
-  'spotify:track:7A0f2o7lsf2e31si3BXpcf','spotify:track:2fXIrAxHbMeLukqcQTyhrh','spotify:track:1mo6pWcIXljy3y1Kju5JWG','spotify:track:4hKLzFvNwHF6dPosGT30ed','spotify:track:4tqcoej1zPvwePZCzuAjJd'
+  'spotify:track:7A0f2o7lsf2e31si3BXpcf',
+  'spotify:track:2fXIrAxHbMeLukqcQTyhrh',
+  'spotify:track:1mo6pWcIXljy3y1Kju5JWG',
+  'spotify:track:4hKLzFvNwHF6dPosGT30ed',
+  'spotify:track:4tqcoej1zPvwePZCzuAjJd'
 ];
 
-async function createPlaylist(tracksUri){
-  const { id: user_id } = await fetchWebApi('v1/me', 'GET')
+document.getElementById('botaoSim').onclick = () => isPublic = true;
+document.getElementById('botaoNao').onclick = () => isPublic = false;
 
-  const playlist = await fetchWebApi(
-    `v1/users/${user_id}/playlists`, 'POST', {
-      "name": "Playlist teste 123",
-      "description": "Playlist created by the tutorial on developer.spotify.com",
-      "public": false
-  })
+document.getElementById('botaoCriar').onclick = async () => {
+  const name = document.getElementById('playlistNome').value.trim();
+  const description = document.getElementById('playlistDescricao').value.trim();
 
-  await fetchWebApi(
-    `v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(',')}`,
-    'POST'
-  );
+  const { id: user_id } = await fetchWebApi('v1/me', 'GET');
+  const playlist = await fetchWebApi(`v1/users/${user_id}/playlists`, 'POST', { name, description, public: isPublic });
 
-  return playlist;
-}
+  await fetchWebApi(`v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(',')}`, 'POST');
 
-const createdPlaylist = await createPlaylist(tracksUri);
-console.log(createdPlaylist.name, createdPlaylist.id);
+  console.log(`Playlist "${playlist.name}" criada!`);
+};
