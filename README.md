@@ -29,34 +29,10 @@ a API varia de usuário para usuário, a sua API estará localizada no campo
 
 ---
 
-## É possivel ver uma quantia maior de música ou um tempo diferente ?
-
-Sim !! No método "getTopTracks" temos a variável "const res"
-e é ela que define a quantia de músicas e o tempo determinado
-
----
-
-## Como eu posso alterar a quantia de tempo/músicas ?
-
-Isso é muito simples, basta mudar os valores na variável "const res"
-![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/spotifyconstres.JPG)
-você pode alterar a quantida de músicas e a data : short, medium e long
-short = 30 dias 
-medium = 90 dias
-long = 180 dias
-
----
 
 ## Resultados
 
-short
-![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top5MusicasShortTime.JPG)
-medium
-![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top5MusicasMediumTime.JPG)
-long
-![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top5MusicasLongTime.JPG)
-short com 10 músicas
-![image_alt](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top10MusicasShortTime.JPG)
+![Video demonstrativo](https://raw.githubusercontent.com/DanielGalleazzo/TopSongsSpotify/refs/heads/main/Top%20M%C3%BAsicas%20do%20Spotify%20-%20Google%20Chrome%202025-06-02%2020-24-19.gif)
 
 ---
 
