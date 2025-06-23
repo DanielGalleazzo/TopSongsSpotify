@@ -1,4 +1,4 @@
-const token = 'BQBhhczCYdWazroxCfNHbIJp-Cte6GzTW-uYbhaSndMayfoa_10jswUDy7u8V0jlSg_aBnxRCSNuD4oTVlBomoyCI4y3CKejUlGjGGgZDQuxnwZRunb0Xqbs8XX4fttnxcH8Qd765Nrcr-QU7pEormz5gT-x--gRZpltDtDtmb1aVeUbvGZwqFzs5aE4WM-6WvbwBe_NL6Y2RNSYvpPJyAfMPP4tcXmFVQ3O2uX_2WpElo17xaxUUNUvA6EIR1tqkZEtA38uTVFq1T7uCfkLWwcKFK5p0L0KL1e5KleDeO5VaOqN75tWiBM';
+const token = 'BQANfKXbLvcs8IdTN-xtq2a9GWb0QP83Q0gEDsQ6Z1PVasPvNzoGoEYFAUIqO3OfbzHqT7ajS97khHywamLyNoGy0G4SRaLomEaY4b9cc_YNjL2lHh06bPoC-NsVuhdfuHMZSa1I7RjimwgJ7Ekr5wPSpQSjGhqtqWQypoHjUfn72Z2wDulrB4CE6czkTLmkgvSRq3_U_zvTmUC1aNYXSFHOKTvuqtt1JZrIex9V1WweR91QjEa1G5GbwsT9MQ_HhV58HRLQnbhiT1GhnWoU-Jc127nrX1hZ-qzemJ0msNjwPDPjwhMYdQI';
 let isPublic = false;
 
 async function fetchWebApi(endpoint, method, body) {
@@ -32,3 +32,4 @@ document.getElementById('botaoCriar').onclick = async () => {
 
   console.log(`Playlist "${playlist.name}" criada!`);
 };
+
